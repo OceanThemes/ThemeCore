@@ -5,22 +5,22 @@
  *
  * @return array
  */
-function helendo_customize_settings() {
+function otcore_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'helendo',
+		'theme' => 'otcore',
 	);
 
 	$panels = array(
 		'general'     => array(
 			'priority' => 5,
-			'title'    => esc_html__( 'General', 'helendo' ),
+			'title'    => esc_html__( 'General', 'otcore' ),
 		),
         'blog'        => array(
-			'title'      => esc_html__( 'Blog', 'helendo' ),
+			'title'      => esc_html__( 'Blog', 'otcore' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
@@ -28,14 +28,14 @@ function helendo_customize_settings() {
 
 	$sections = array(
 		'blog_page'           => array(
-			'title'       => esc_html__( 'Blog Page', 'helendo' ),
+			'title'       => esc_html__( 'Blog Page', 'otcore' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'blog',
 		),
         'single_post'           => array(
-			'title'       => esc_html__( 'Single Post', 'helendo' ),
+			'title'       => esc_html__( 'Single Post', 'otcore' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
@@ -47,28 +47,28 @@ function helendo_customize_settings() {
 		// Blog Page
 		'blog_view'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Blog View', 'helendo' ),
+			'label'       => esc_html__( 'Blog View', 'otcore' ),
 			'section'     => 'blog_page',
 			'default'     => 'classic',
 			'priority'    => 10,
 			'choices'     => array(
-				'classic' => esc_html__( 'Classic', 'helendo' ),
-				'grid' => esc_html__( 'Grid', 'helendo' ),
-				'list'    => esc_html__( 'List', 'helendo' ),
-				'masonry'    => esc_html__( 'Masonry', 'helendo' ),
+				'classic' => esc_html__( 'Classic', 'otcore' ),
+				'grid' => esc_html__( 'Grid', 'otcore' ),
+				'list'    => esc_html__( 'List', 'otcore' ),
+				'masonry'    => esc_html__( 'Masonry', 'otcore' ),
 			),
 		),
 		'blog_layout'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Blog Layout', 'helendo' ),
+			'label'       => esc_html__( 'Blog Layout', 'otcore' ),
 			'section'     => 'blog_page',
 			'default'     => 'content-sidebar',
 			'priority'    => 10,
-			'description' => esc_html__( 'Select default sidebar for the blog page.', 'helendo' ),
+			'description' => esc_html__( 'Select default sidebar for the blog page.', 'otcore' ),
 			'choices'     => array(
-				'content-sidebar' => esc_html__( 'Right Sidebar', 'helendo' ),
-				'sidebar-content' => esc_html__( 'Left Sidebar', 'helendo' ),
-				'full-content'    => esc_html__( 'Full Content', 'helendo' ),
+				'content-sidebar' => esc_html__( 'Right Sidebar', 'otcore' ),
+				'sidebar-content' => esc_html__( 'Left Sidebar', 'otcore' ),
+				'full-content'    => esc_html__( 'Full Content', 'otcore' ),
 			),
 			'active_callback' => array(
 				array(
@@ -80,14 +80,14 @@ function helendo_customize_settings() {
 		),
 		'blog_grid_style'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Blog grid style', 'helendo' ),
+			'label'       => esc_html__( 'Blog grid style', 'otcore' ),
 			'section'     => 'blog_page',
 			'default'     => '1',
 			'priority'    => 10,
-			'description' => esc_html__( 'Select style for the blog grid page.', 'helendo' ),
+			'description' => esc_html__( 'Select style for the blog grid page.', 'otcore' ),
 			'choices'     => array(
-				'1' => esc_html__( 'Style 1', 'helendo' ),
-				'2' => esc_html__( 'Style 2', 'helendo' ),
+				'1' => esc_html__( 'Style 1', 'otcore' ),
+				'2' => esc_html__( 'Style 2', 'otcore' ),
 			),
 			'active_callback' => array(
 				array(
@@ -99,14 +99,14 @@ function helendo_customize_settings() {
 		),
 		'blog_columns'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Blog Columns', 'helendo' ),
+			'label'       => esc_html__( 'Blog Columns', 'otcore' ),
 			'section'     => 'blog_page',
 			'default'     => '3',
 			'priority'    => 10,
-			'description' => esc_html__( 'Select default blog columns for the blog page.', 'helendo' ),
+			'description' => esc_html__( 'Select default blog columns for the blog page.', 'otcore' ),
 			'choices'     => array(
-				'3' => esc_html__( '3 Columns', 'helendo' ),
-				'2' => esc_html__( '2 Columns', 'helendo' ),
+				'3' => esc_html__( '3 Columns', 'otcore' ),
+				'2' => esc_html__( '2 Columns', 'otcore' ),
 			),
 			'active_callback' => array(
 				array(
@@ -118,47 +118,47 @@ function helendo_customize_settings() {
 		),
 		'excerpt_length'               => array(
 			'type'     => 'number',
-			'label'    => esc_html__( 'Excerpt Length', 'helendo' ),
+			'label'    => esc_html__( 'Excerpt Length', 'otcore' ),
 			'section'  => 'blog_page',
 			'default'  => '50',
 			'priority' => 10,
 		),
 		'blog_entry_meta'              => array(
 			'type'     => 'multicheck',
-			'label'    => esc_html__( 'Entry Meta', 'helendo' ),
+			'label'    => esc_html__( 'Entry Meta', 'otcore' ),
 			'section'  => 'blog_page',
 			'default'  => array( 'date', 'author', 'cat' ),
 			'choices'  => array(
-				'date'    => esc_html__( 'Date', 'helendo' ),
-				'author'  => esc_html__( 'Author', 'helendo' ),
-				'cat'     => esc_html__( 'Categories', 'helendo' ),
-				'cmt'     => esc_html__( 'Count comment', 'helendo' ),
+				'date'    => esc_html__( 'Date', 'otcore' ),
+				'author'  => esc_html__( 'Author', 'otcore' ),
+				'cat'     => esc_html__( 'Categories', 'otcore' ),
+				'cmt'     => esc_html__( 'Count comment', 'otcore' ),
 			),
 			'priority' => 10,
 		),
 		'blog_read_more'               => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Blog Read More', 'helendo' ),
+			'label'           => esc_html__( 'Blog Read More', 'otcore' ),
 			'section'         => 'blog_page',
-			'default'         => esc_html__( 'Read more', 'helendo' ),
+			'default'         => esc_html__( 'Read more', 'otcore' ),
 			'priority'        => 10,
 		),
 		'type_nav'                     => array(
 			'type'     => 'select',
-			'label'    => esc_html__( 'Type of Navigation', 'helendo' ),
+			'label'    => esc_html__( 'Type of Navigation', 'otcore' ),
 			'section'  => 'blog_page',
 			'default'  => 'numberic',
 			'priority' => 10,
 			'choices'  => array(
-				'numberic'   => esc_html__( 'Numberic', 'helendo' ),
-				'view_more' => esc_html__( 'View More', 'helendo' ),
+				'numberic'   => esc_html__( 'Numberic', 'otcore' ),
+				'view_more' => esc_html__( 'View More', 'otcore' ),
 			),
 		),
 		'view_more_text'               => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'View More Text', 'helendo' ),
+			'label'           => esc_html__( 'View More Text', 'otcore' ),
 			'section'         => 'blog_page',
-			'default'         => esc_html__( 'MORE', 'helendo' ),
+			'default'         => esc_html__( 'MORE', 'otcore' ),
 			'priority'        => 10,
 			'active_callback' => array(
 				array(
@@ -172,32 +172,32 @@ function helendo_customize_settings() {
 		// Single Post
 		'single_post_layout'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Single Post Layout', 'helendo' ),
+			'label'       => esc_html__( 'Single Post Layout', 'otcore' ),
 			'section'     => 'single_post',
 			'default'     => 'content-sidebar',
 			'priority'    => 10,
-			'description' => esc_html__( 'Select default sidebar for the single post page.', 'helendo' ),
+			'description' => esc_html__( 'Select default sidebar for the single post page.', 'otcore' ),
 			'choices'     => array(
-				'content-sidebar' => esc_html__( 'Right Sidebar', 'helendo' ),
-				'sidebar-content' => esc_html__( 'Left Sidebar', 'helendo' ),
-				'full-content'    => esc_html__( 'Full Content', 'helendo' ),
+				'content-sidebar' => esc_html__( 'Right Sidebar', 'otcore' ),
+				'sidebar-content' => esc_html__( 'Left Sidebar', 'otcore' ),
+				'full-content'    => esc_html__( 'Full Content', 'otcore' ),
 			),
 		),
         'post_entry_meta'              => array(
 			'type'     => 'multicheck',
-			'label'    => esc_html__( 'Entry Meta', 'helendo' ),
+			'label'    => esc_html__( 'Entry Meta', 'otcore' ),
 			'section'  => 'single_post',
 			'default'  => array( 'date', 'author', 'cat' ),
 			'choices'  => array(
-				'date'    => esc_html__( 'Date', 'helendo' ),
-                'author'  => esc_html__( 'Author', 'helendo' ),
-                'cat'     => esc_html__( 'Categories', 'helendo' ),
+				'date'    => esc_html__( 'Date', 'otcore' ),
+                'author'  => esc_html__( 'Author', 'otcore' ),
+                'cat'     => esc_html__( 'Categories', 'otcore' ),
 			),
 			'priority' => 10,
 		),
 		'show_author_box'           => array(
 			'type'     => 'toggle',
-			'label'    => esc_html__( 'Show Author Box', 'helendo' ),
+			'label'    => esc_html__( 'Show Author Box', 'otcore' ),
 			'section'  => 'single_post',
 			'default'  => 0,
 			'priority' => 10,
@@ -210,8 +210,8 @@ function helendo_customize_settings() {
 
 		'show_post_social_share' => array(
 			'type'        => 'toggle',
-			'label'       => esc_html__( 'Show Socials Share', 'helendo' ),
-			'description' => esc_html__( 'Check this option to show socials share in the single post page.', 'helendo' ),
+			'label'       => esc_html__( 'Show Socials Share', 'otcore' ),
+			'description' => esc_html__( 'Check this option to show socials share in the single post page.', 'otcore' ),
 			'section'     => 'single_post',
 			'default'     => 0,
 			'priority'    => 10,
@@ -219,16 +219,16 @@ function helendo_customize_settings() {
 
 		'post_socials_share'        => array(
 			'type'            => 'multicheck',
-			'label'           => esc_html__( 'Socials Share', 'helendo' ),
+			'label'           => esc_html__( 'Socials Share', 'otcore' ),
 			'section'         => 'single_post',
 			'default'         => array( 'facebook', 'twitter', 'google', 'tumblr' ),
 			'choices'         => array(
-				'facebook'  => esc_html__( 'Facebook', 'helendo' ),
-				'twitter'   => esc_html__( 'Twitter', 'helendo' ),
-				'google'    => esc_html__( 'Google Plus', 'helendo' ),
-				'tumblr'    => esc_html__( 'Tumblr', 'helendo' ),
-				'pinterest' => esc_html__( 'Pinterest', 'helendo' ),
-				'linkedin'  => esc_html__( 'Linkedin', 'helendo' ),
+				'facebook'  => esc_html__( 'Facebook', 'otcore' ),
+				'twitter'   => esc_html__( 'Twitter', 'otcore' ),
+				'google'    => esc_html__( 'Google Plus', 'otcore' ),
+				'tumblr'    => esc_html__( 'Tumblr', 'otcore' ),
+				'pinterest' => esc_html__( 'Pinterest', 'otcore' ),
+				'linkedin'  => esc_html__( 'Linkedin', 'otcore' ),
 			),
 			'priority'        => 10,
 			'active_callback' => array(
@@ -241,11 +241,11 @@ function helendo_customize_settings() {
 		),
     );
 
-	$settings['panels']   = apply_filters( 'helendo_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'helendo_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'helendo_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'otcore_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'otcore_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'otcore_customize_fields', $fields );
 
 	return $settings;
 }
 
-$helendo_customize = new Helendo_Customize( helendo_customize_settings() );
+$otcore_customize = new otcore_Customize( otcore_customize_settings() );
