@@ -1,5 +1,10 @@
 <?php 
-// [oceanthemes_date time_custom="F j, Y"]
+/**
+* https://codex.wordpress.org/Formatting_Date_and_Time
+* Using this shortcode in backend theme option: [oceanthemes_date time_custom="F j, Y"]
+* Ouput on footer.php file: echo wp_specialchars_decode( do_shortcode( otcore_get_option('copyright') ) );
+**/
+
 function oceanthemes_date_func( $atts ) {
     $date_format = shortcode_atts( array(
         'time_custom' => 'Y',        
@@ -11,9 +16,4 @@ function oceanthemes_date_func( $atts ) {
     return $gmt_timestamp;
 }
 add_shortcode( 'oceanthemes_date', 'oceanthemes_date_func' );
-
-
-Ouput:
-
-echo wp_specialchars_decode( do_shortcode( theme_name_prefix_get_option('copyright') ) );
 ?>
