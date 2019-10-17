@@ -15,12 +15,12 @@ Kirki_Helper::get_terms( 'nav_menu', array( 'hide_empty' => true ) );
 
 Example:
 array(
-			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Menu', 'onum' ), 
-	 		'description' => esc_attr__( 'Choose a menu to show on topbar here.', 'onum' ), 
-	 		'section'     => 'topbar_header', 
-	 		'default'     => '', 
-	 		'priority'    => 1,
-	 		'placeholder' => esc_attr__( 'Select a menu', 'onum' ), 
-	 		'choices' => Kirki_Helper::get_terms( 'nav_menu', array( 'hide_empty' => true ) ) 
-		),
+	'type'        => 'select',  
+	'label'       => esc_attr__( 'Select Menu', 'onum' ), 
+	'description' => esc_attr__( 'Choose a menu to show on topbar here.', 'onum' ), 
+	'section'     => 'topbar_header', 
+	'default'     => '', 
+	'priority'    => 1,
+	'placeholder' => esc_attr__( 'Select a menu', 'onum' ), 
+	'choices' => Kirki_Helper::get_terms( 'nav_menu', array( 'hide_empty' => true ) ) 
+),
