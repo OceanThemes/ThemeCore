@@ -1,0 +1,26 @@
+Hey there!
+
+To get an array of post types that can be used in a <select> control for example you can use this:
+Kirki_Helper::get_post_types();
+
+To get an array of taxonomies, use this:
+Kirki_Helper::get_taxonomies();
+
+To get an array of posts from a post type you can use this:
+// For a full list of arguments see https://codex.wordpress.org/Template_Tags/get_posts
+Kirki_Helper::get_posts( array( 'post_type' => 'post' ) );
+
+To get an array of WordPress menu, use this:
+Kirki_Helper::get_terms( 'nav_menu', array( 'hide_empty' => true ) ); 
+
+Example:
+array(
+			'type'        => 'select',  
+	 		'label'       => esc_attr__( 'Select Menu', 'onum' ), 
+	 		'description' => esc_attr__( 'Choose a menu to show on topbar here.', 'onum' ), 
+	 		'section'     => 'topbar_header', 
+	 		'default'     => '', 
+	 		'priority'    => 1,
+	 		'placeholder' => esc_attr__( 'Select a menu', 'onum' ), 
+	 		'choices' => Kirki_Helper::get_terms( 'nav_menu', array( 'hide_empty' => true ) ) 
+		),
