@@ -2,8 +2,8 @@
 	<?php the_post_thumbnail('thumbnail'); ?>
 	<h5><?php the_title(); ?></h5>
 	<?php 
-		$terms = get_the_terms( get_the_ID(), 'portfolio_cat' );		                        
-		if ( $terms && ! is_wp_error( $terms ) ) : 	
+		$terms = get_the_terms( get_the_ID(), 'portfolio_cat' );	
+		if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) :
 			echo '<ul class="portfolio-cates">';	 
 		    foreach ( $terms as $term ) {
 		    	// The $term is an object, so we don't need to specify the $taxonomy.
