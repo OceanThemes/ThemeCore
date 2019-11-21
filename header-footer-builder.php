@@ -1,4 +1,4 @@
-
+<?php
 //Register Custom Post Type - admin-functions.php
 add_action( 'init', 'onum_create_header_builder' );
 function onum_create_header_builder() {
@@ -156,6 +156,5 @@ if ( ! function_exists( 'onum_footer_builder' ) ) {
 }
 
 // Place this functions on footer.php file
-<footer id="site-footer" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-		<?php onum_footer_builder(); ?>		
-</footer><!-- #site-footer -->
+onum_footer_builder();		
+
