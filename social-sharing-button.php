@@ -1,3 +1,4 @@
+<?php
 function onum_social_sharing_buttons($content) {
     global $post;
     if(is_singular() || is_home()){
