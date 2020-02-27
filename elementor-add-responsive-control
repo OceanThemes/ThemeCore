@@ -1,0 +1,68 @@
+<?php
+class Elementor_Test_Widget extends \Elementor\Widget_Base {
+
+	protected function _register_controls() {
+
+		$this->start_controls_section(
+			'content_section',
+			[
+				'label' => __( 'Content', 'plugin-name' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_responsive_control(
+			'width',
+			[
+				'label' => __( 'Width', 'plugin-domain' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+						'step' => 5,
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'devices' => [ 'desktop', 'tablet', 'mobile' ],
+				'desktop_default' => [
+					'size' => 30,
+					'unit' => 'px',
+				],
+				'tablet_default' => [
+					'size' => 20,
+					'unit' => 'px',
+				],
+				'mobile_default' => [
+					'size' => 10,
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .box' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+	}
+
+	protected function render() {
+		$settings = $this->get_settings_for_display();
+		echo '<div class="box" style="width: ' . $settings['width']['size'] . $settings['width']['unit'] '"> ... </div>';
+    echo 'Desktop Size' . $settings['width']['size'];
+    echo 'Tablet Size' . $settings['width_tablet']['size'];
+    echo 'Mobile Size' . $settings['width_mobile']['size'];
+	}
+
+	protected function _content_template() {
+		?>
+		<div class="box" style="width: {{ settings.width.size }}{{ settings.width.unit }}"> ... </div>';
+		<?php
+	}
+
+}
