@@ -54,9 +54,9 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		echo '<div class="box" style="width: ' . $settings['width']['size'] . $settings['width']['unit'] '"> ... </div>';
-    echo 'Desktop Size' . $settings['width']['size'];
-    echo 'Tablet Size' . $settings['width_tablet']['size'];
-    echo 'Mobile Size' . $settings['width_mobile']['size'];
+     		echo 'Desktop Size' . $settings['width']['size'];
+    		echo 'Tablet Size' . $settings['width_tablet']['size'];
+    		echo 'Mobile Size' . $settings['width_mobile']['size'];
 	}
 
 	protected function _content_template() {
